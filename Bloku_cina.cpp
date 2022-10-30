@@ -65,7 +65,6 @@ public:
 
 	void initVariables();
 	void initWindow();
-	void initEnemies();
 	void initFonts();
 	void initTexts();
 
@@ -96,14 +95,6 @@ void Game::initWindow()
 	window->setFramerateLimit(60);
 }
 
-void Game::initEnemies()
-{
-	enemy.setPosition(10.f, 10.f);
-	enemy.setSize(Vector2f(100.f, 100.f));
-	enemy.setFillColor(Color::Cyan);
-
-}
-
 void Game::initFonts()
 {
 	if (!font.loadFromFile("dosis.light.ttf"))
@@ -130,7 +121,6 @@ Game:: Game()
 	initWindow();
 	initFonts();
 	initTexts();
-	initEnemies();
 }
 Game::~Game()
 {
